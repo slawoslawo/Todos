@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { request } from 'http';
-import { Activity } from '../Models/activity';
+import { Todo } from '../Models/todo';
 
 const sleep = (delay: number ) => {
   return new Promise((resolve) => {
@@ -29,15 +29,15 @@ const requests = {
   del: <T> (url: string) => axios.delete<T>(url).then(responseBody),
 }
 
-const Activities = {
-  list: () => requests.get<Activity[]>('/activities'),
-  details: (id: string) => requests.get<Activity>(`/activities/${id}`),
-  create: (activity: Activity) => requests.post<void>('/activities', activity),
-  update: (activity: Activity) => requests.put<void>(`/activities/${activity.id}`,activity),
-  delete: (id: string) => requests.del<void>(`/activities/${id}`)
+const Todos = {
+  list: () => requests.get<Todo[]>('/todos'),
+  details: (id: string) => requests.get<Todo>(`/todos/${id}`),
+  create: (todo: Todo) => requests.post<void>('/todos', todo),
+  update: (todo: Todo) => requests.put<void>(`/todos/${todo.id}`,todo),
+  delete: (id: string) => requests.del<void>(`/todos/${id}`)
 }
 const agent = {
-  Activities 
+  Todos 
 }
 export default agent;
 

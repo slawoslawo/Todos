@@ -6,20 +6,19 @@ import { useStore } from "../stores/store";
 
 export default function NavBar() {
 
-  const {activityStore} = useStore();
+  const {todoStore} = useStore();
 
   return(
     <Menu inverted fixed='top'>
       <Container>
         <Menu.Item header>
-          <img src="/assets/logo.png" alt="logo" style={{marginRight: '10px'}} />
-          Reactivities
+          
         </Menu.Item>
-        <Menu.Item name='Activities'>
+        <Menu.Item name='Todos'>
 
         </Menu.Item>
         <Menu.Item>
-          <Button  onClick={() =>  activityStore.openForm()} positive content='Create Activity'></Button>
+          <Button  onClick={() =>  todoStore.openForm()} color='blue'  content='Create Todo'></Button>
         </Menu.Item>
       </Container>
 

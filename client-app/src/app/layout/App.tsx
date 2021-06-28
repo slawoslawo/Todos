@@ -3,32 +3,32 @@ import { Container} from 'semantic-ui-react';
 
 import NavBar from './NavBar';
 import { Fragment } from 'react';
-import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
+import TodoDashboard from '../../features/todos/dashboard/TodoDashboard';
 
-import agent from '../api/agent';
+
 import LoadingComponent from './LoadingComponent';
 import { useStore } from '../stores/store';
 import { observer } from 'mobx-react-lite';
 
 function App() {
-  const {activityStore} = useStore();
+  const {todoStore} = useStore();
 
 
 
   useEffect(() => {
-    activityStore.loadActivities();
-  },[activityStore])
+    todoStore.loadTodos();
+  },[todoStore])
 
 
 
 
-  if(activityStore.loadingInitial) return <LoadingComponent content='Loading app'/>
+  if(todoStore.loadingInitial) return <LoadingComponent content='Loading app'/>
   return (
     <Fragment>
         <NavBar ></NavBar>
         <Container style={{marginTop: '7em'}}>
 
-          <ActivityDashboard />
+          <TodoDashboard />
             
           </Container>
         

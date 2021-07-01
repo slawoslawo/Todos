@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/app/layout/styles.css"],"names":[],"mappings":"AAAA,KACE,kCAEF,CACA,4BACE,+BACF","file":"main.d03f65a6.chunk.css","sourcesContent":["body {\n  background-color: #EAEAEA !important;\n\n}\n.ui.inverted.top.fixed.menu {\n  background-color: black  !important;\n}"]}

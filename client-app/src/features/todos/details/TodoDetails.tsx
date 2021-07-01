@@ -28,9 +28,9 @@ export default function TodoDetails() {
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-          <Button.Group widths='2'>
-            <Button onClick={() => openForm(todo.id)} basic color='blue' content='Edit'></Button>
-            <Button onClick={cancelSelectedTodo} basic color='grey' content='Cancel'></Button>
+          <Button.Group widths='1'>
+            <Button onClick={() => openForm(todo.id)} basic color='grey' content='Edit'></Button>
+            <Button onClick={cancelSelectedTodo} basic color='black' content='Cancel'></Button>
 
           </Button.Group>        
       </Card.Content>

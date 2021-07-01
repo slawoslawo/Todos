@@ -18,7 +18,7 @@ export default function NavBar() {
 
         </Menu.Item>
         <Menu.Item>
-          <Button  onClick={() =>  todoStore.openForm()} color='blue'  content='Create Todo'></Button>
+          <Button  onClick={() =>  todoStore.openForm()} color='grey'  content='Create Todo'></Button>
         </Menu.Item>
       </Container>
 

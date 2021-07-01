@@ -40,8 +40,8 @@ export default observer( function TodoForm() {
         onChange={handleInputChange}/>
         <Form.Input type='date' placeholder='Date' value={todo.date} name='date' 
         onChange={handleInputChange}/>
-        <Button loading={loading} floated='right' color='blue' type='submit' content='Submit'/>
-        <Button onClick={closeForm} floated='right' type='button' content='Cancel'/>
+        <Button loading={loading} floated='right' color='grey' type='submit' content='Submit'/>
+        <Button onClick={closeForm} floated='right' type='button' content='Cancel' color='black' />
       </Form>
     </Segment>
   )
